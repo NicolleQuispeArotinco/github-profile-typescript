@@ -26,13 +26,13 @@ interface UserProps {
 }
 
 function User(params: Props){
-  let  username = params.match.params.login;
+  // let  username = params.match.params.login;
   const [user, setUser] = useState<Partial<UserProps>>({});
 
   useEffect(() => {
     const fetchUser = async () => {
       const response = await fetch(
-        `https://api.github.com/users/${username}`
+        `https://api.github.com/users/${params.match.params.login}`
       );
       const data = await response.json();
       setUser(data);
@@ -41,9 +41,9 @@ function User(params: Props){
       fetchUser();
     }
     fetchUser();
-  }, [username]);
+  }, [params.match.params.login]);
 
-  console.log(username);
+  // console.log(username);
   
   return(
     <div>

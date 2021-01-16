@@ -26,7 +26,6 @@ interface UserProps {
 }
 
 function User(params: Props){
-  // let  username = params.match.params.login;
   const [user, setUser] = useState<Partial<UserProps>>({});
 
   useEffect(() => {
@@ -43,8 +42,6 @@ function User(params: Props){
     fetchUser();
   }, [params.match.params.login]);
 
-  // console.log(username);
-  
   return(
     <div>
       <HeaderWithoutInput/>

@@ -19,7 +19,6 @@ function Main(){
     fetchUsers();
   }, [query]);
   
-  console.log(users);
   return(
     <div>
       <Header query={query} setQuery={setQuery}/>

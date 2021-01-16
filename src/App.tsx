@@ -1,8 +1,8 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 import Main from "./features/Main";
+import User from "./features/User"
 
 import {
   BrowserRouter as Router,
@@ -18,7 +18,7 @@ function App() {
           <Route exact path="/">
             <Main/>
           </Route>
-          {/* <Route exact path="/:login" component={User}/> */}
+          <Route exact path="/:login" component={User}/>
         </Switch>
       </div>
     </Router>

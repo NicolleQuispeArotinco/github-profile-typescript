@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+.container{
+  width: 80%;
+  margin: 5rem auto;
+}
+
+.profilePicture{
+  border-radius: 50%;
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+}
+
+.userInfo{
+  display: flex;
+}
+
+.nameContainer{
+  display: flex;
+  align-items: center;
+}
+
+.nameContainer p, .nameContainer h1{
+  font-size: 1.5rem;
+  font-family: 'Nunito';
+  font-weight: bold;
+}
+
+.nameContainer p{
+  margin-left: 8px;
+  color: #939ca7;
+}
+
+.moreInfo{
+  padding: 0;
+  margin-left: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.moreInfo li{
+  list-style: none;
+  font-family: 'Nunito';
+  font-weight: bold;
+  text-align: left;
+  margin-right: 8px;
+}
+
+.moreInfo li span{
+  font-weight: lighter;
+  margin-left: 5px;
+}
+
+.buttonRepositories{
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: 1px solid #30363D;
+  background-color: transparent;
+  color: #282b30;
+  font-size: 1.2rem;
+  cursor:not-allowed;
+}
+
+.buttonContainer{
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 2rem;
+}
+
+.bio{
+  margin: 0;
+}

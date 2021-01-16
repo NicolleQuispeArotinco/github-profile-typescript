@@ -7,18 +7,19 @@ function Main(){
   const [query, setQuery] = useState<string>("");
   const [users, setUsers] = useState<[]>([]);
 
-  // useEffect(() => {
-  //   const fetchUsers = async () => {
-  //     const response = await fetch(
-  //       `https://api.github.com/users`
-  //     );
-  //     const data = await response.json();
-  //     const usersBy = data.filter(user => user.login.toLowerCase().includes(query))
-  //     setUsers(usersBy);
-  //   };
-  //   fetchUsers();
-  // }, [query]);
+  useEffect(() => {
+    const fetchUsers = async () => {
+      const response = await fetch(
+        `https://api.github.com/users`
+      );
+      const data = await response.json();
+      const usersBy = data.filter((user: {login:string}) => user.login.toLowerCase().includes(query))
+      setUsers(usersBy);
+    };
+    fetchUsers();
+  }, [query]);
   
+  console.log(users);
   return(
     <div>
       <Header query={query} setQuery={setQuery}/>

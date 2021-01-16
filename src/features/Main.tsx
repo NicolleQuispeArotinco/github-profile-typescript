@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 
 import Header from "./Header";
-// import Info from "./Info";
+import Info from "./Info";
 
 function Main(){
   const [query, setQuery] = useState<string>("");
@@ -23,7 +23,7 @@ function Main(){
   return(
     <div>
       <Header query={query} setQuery={setQuery}/>
-      {/* <Info users={users} query={query}/> */}
+      <Info users={users} query={query}/>
     </div>
   )
 }

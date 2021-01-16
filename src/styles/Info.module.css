@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+:root {
+  --font: 'Nunito';
+}
+
+.container{
+  width: 80%;
+  margin: 5rem auto;
+}
+
+.userContent{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+.userInfo{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  font-family: var(--font);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.userInfo span{
+  margin-left: 8px;
+  color: #8B949E;
+}
+
+.profilePicture{
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  margin-right: 1.5rem;
+}
+
+.viewButton{
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: 1px solid #30363D;
+  background-color: transparent;
+  font-size: 1rem;
+  cursor:pointer;
+}
+
+.viewButton a{
+  color: #282b30;
+  text-decoration: none;
+}

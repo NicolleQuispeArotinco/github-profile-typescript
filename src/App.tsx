@@ -7,8 +7,6 @@ import {
   Switch,
 } from 'react-router-dom';
 
-// import Main from "./features/Main";
-// import User from "./features/User"
 const Main = React.lazy(() => import("./features/Main"));
 const User = React.lazy(() => import("./features/User"))
 

@@ -3,26 +3,32 @@ import React, {useState, useEffect} from "react";
 import Header from "./Header";
 import Info from "./Info";
 
+interface UserProps {
+  id: number;
+  avatar_url: string;
+  login: string;
+  name:string;
+}
+
 function Main(){
   const [query, setQuery] = useState<string>("");
-  const [users, setUsers] = useState<[]>([]);
+  const [user, setUser] = useState<UserProps>({id: 0, avatar_url: "", login: "", name: ""});
 
   useEffect(() => {
-    const fetchUsers = async () => {
+    const fetchUser = async () => {
       const response = await fetch(
-        `https://api.github.com/users`
+        `https://api.github.com/users/${query}`
       );
       const data = await response.json();
-      const usersBy = data.filter((user: {login:string}) => user.login.toLowerCase().includes(query))
-      setUsers(usersBy);
+      setUser(data);
     };
-    fetchUsers();
+    fetchUser();
   }, [query]);
   
   return(
     <div>
       <Header query={query} setQuery={setQuery}/>
-      <Info users={users} query={query}/>
+      <Info user={user} query={query}/>
     </div>
   )
 }
